@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- Meta, title, CSS, favicons, etc. -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Suscity</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	
+
+	<link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+	<link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+	<link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+	<link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+	<link href="../build/css/custom.min.css" rel="stylesheet">
+	<link href="css/datepicker.css" rel="stylesheet">
+
+	<!-- Date Picker -->
+	<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+
+	<!-- Charts -->
+	<script type="text/javascript" src="../production/js/charts/Chart.bundle.js"></script>
+	<script type="text/javascript" src="../production/js/charts/utils.js"></script>
+
+	<!-- JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+	<!-- Data -->
+	<script type="text/javascript" src="../production/js/get_sensor_data.js"></script>
+	<script type="text/javascript" src="js/jquery/md5.min.js"></script>
+    <script type="text/javascript" src="js/jquery/cookies.js"></script>
+
+
+    <link href="../vendors/pnotify/dist/pnotify.css" rel="stylesheet">
+    <link href="../vendors/pnotify/dist/pnotify.buttons.css" rel="stylesheet">
+    <link href="../vendors/pnotify/dist/pnotify.nonblock.css" rel="stylesheet">
+
+	<style>
+		canvas{
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+		}
+
+		.loader {
+		    border: 8px solid #f3f3f3; /* Light grey */
+		    border-top: 8px solid #26b99a; /* Soft Green */
+		    border-radius: 50%;
+		    width: 80px;
+		    height: 80px;
+		    animation: spin 2s linear infinite;
+		}
+
+		@keyframes spin {
+		    0% { transform: rotate(0deg); }
+		    100% { transform: rotate(720deg); }
+		}
+	</style>
+</head>
+
+<body class="nav-md">
+	<div class="container body">
+		<div class="main_container">
+			<div class="col-md-3 left_col">
+				<div class="left_col scroll-view">
+					<div class="navbar nav_title" style="border: 0;">
+						<a href="index.html" class="site_title"><i class="fa fa-dashboard"></i><span> Suscity</span></a>
+					</div>
+
+					<div class="clearfix"></div>
+
+					<div class="profile">
+						<div class="profile_pic">
+							<img src="images/user.png" alt="..." class="img-circle profile_img">
+						</div>
+
+						<div class="profile_info">
+							<span>Welcome,</span>
+							<h2 id="userNav"></h2>
+						</div>
+					</div>
+
+					<div class="clearfix"></div>
+
+					<br>
+
+					<!-- sidebar menu -->
+					<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+						<div class="menu_section">
+							<h3>Menu</h3>
+							<ul class="nav side-menu">
+								<li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+									<ul class="nav child_menu">
+										<li><a href="index.html">Dashboard</a></li>
+										<li><a href="submit.html">Submit Data</a></li>
+									</ul>
+								</li>
+								<li><a><i class="fa fa-user"></i> Profile <span class="fa fa-chevron-down"></span></a>
+									<ul class="nav child_menu">
+										<li><a href="index3.html">[WIP] Edit Profile</a></li>
+										<li><a href="index4.html">[WIP] - </a></li>
+										<li><a href="index4.html">[WIP] - </a></li>
+										<li><a href="index4.html">[WIP] - </a></li>
+										<li><a href="index4.html">[WIP] - </a></li>
+									</ul>
+								</li>
+								<li><a><i class="fa fa-at"></i> Contacts <span class="fa fa-chevron-down"></span></a>
+									<ul class="nav child_menu">
+										<li><a href="index6.html">[WIP] Contacts</a></li>
+										<li><a href="index7.html">[WIP] About us</a></li>
+										<li><a href="versions.html">Versions</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- sidebar menu -->
+
+				</div>
+			</div>
+
+			<!-- NAVBAR -->
+			<div class="top_nav">
+				<div class="nav_menu">
+					<nav>
+						<div class="nav toggle">
+							<a id="menu_toggle"><i class="fa fa-bars"></i></a>
+						</div>
+
+						<ul class="nav navbar-nav navbar-right">
+							<li class="">
+								<a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+									<img src="images/user.png"> <b id="userTop"></b> 
+									<span class=" fa fa-angle-down"></span>
+								</a>
+								<ul class="dropdown-menu dropdown-usermenu pull-right">
+									<li><a href="login.html"><i class="fa fa-sign-out pull-right"></i>Log Out</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!-- NAVBAR -->
+
+
+			<!-- PAGE CONTENT -->
+			<div class="right_col" role="main">
+				<!-- TOP -->
+				<div id="pageTop" class='col-xs-6 .col-md-6' style='padding-top: 10px;'>
+					<!-- SENSORS BELLOW -->
+				</div>
+				<!-- TOP -->
+
+				<div class="clearfix"></div>
+
+				<div class="span6" style="float: none; margin: 0 calc(50% - 40px);">
+					<div class="loader"></div>
+				</div>
+
+				<div class="clearfix"></div>
+				
+				<div id="pageContent">
+					<!-- GRAPHS BELLOW -->
+				</div>
+
+			</div>
+            <!-- PAGE CONTENT -->
+
+            <!-- FOOTER -->
+            <footer class="right_col" role="main">
+		          <div class="clearfix"></div>
+	        </footer>
+	        <!-- FOOTER -->
+
+        </div>
+    </div>
+
+    <!-- jQuery -->
+	<script src="../vendors/jquery/dist/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- FastClick -->
+	<script src="../vendors/fastclick/lib/fastclick.js"></script>
+	<!-- NProgress -->
+	<script src="../vendors/nprogress/nprogress.js"></script>
+	<!-- Chart.js -->
+	<script src="../vendors/Chart.js/dist/Chart.min.js"></script>
+	<!-- gauge.js -->
+	<script src="../vendors/gauge.js/dist/gauge.min.js"></script>
+	<!-- bootstrap-progressbar -->
+	<script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+	<!-- iCheck -->
+	<script src="../vendors/iCheck/icheck.min.js"></script>
+	<!-- Skycons -->
+	<script src="../vendors/skycons/skycons.js"></script>
+	<!-- Flot -->
+	<script src="../vendors/Flot/jquery.flot.js"></script>
+	<script src="../vendors/Flot/jquery.flot.pie.js"></script>
+	<script src="../vendors/Flot/jquery.flot.time.js"></script>
+	<script src="../vendors/Flot/jquery.flot.stack.js"></script>
+	<script src="../vendors/Flot/jquery.flot.resize.js"></script>
+	<!-- Flot plugins -->
+	<script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+	<script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+	<script src="../vendors/flot.curvedlines/curvedLines.js"></script>
+	<!-- DateJS -->
+    <script src="../vendors/DateJS/build/date.js"></script>
+	<!-- JQVMap -->
+	<script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
+	<script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+	<script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+
+	<!-- Custom Theme Scripts -->
+	<script src="../build/js/custom.min.js"></script>
+
+	<!-- Date Picker -->
+	<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+
+	<script src="../vendors/pnotify/dist/pnotify.js"></script>
+	<script src="../vendors/pnotify/dist/pnotify.buttons.js"></script>
+	<script src="../vendors/pnotify/dist/pnotify.nonblock.js"></script>
+</body>
+</html>

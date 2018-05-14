@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Suscity</title>
+
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link href="css/datepicker.css" rel="stylesheet">
+
+    <!-- Date Picker -->
+    <script type="text/javascript"
+            src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css"
+          href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css"/>
+
+    <!-- Charts -->
+    <script type="text/javascript" src="../production/js/charts/Chart.bundle.js"></script>
+    <script type="text/javascript" src="../production/js/charts/utils.js"></script>
+
+    <!-- JS -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+    <!-- Data -->
+    <script type="text/javascript" src="../production/js/set_data.js"></script>
+    <script type="text/javascript" src="js/jquery/md5.min.js"></script>
+    <script type="text/javascript" src="js/jquery/cookies.js"></script>
+
+    <link href="../vendors/pnotify/dist/pnotify.css" rel="stylesheet">
+    <link href="../vendors/pnotify/dist/pnotify.buttons.css" rel="stylesheet">
+    <link href="../vendors/pnotify/dist/pnotify.nonblock.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+<div class="container body">
+    <div class="main_container">
+        <div class="col-md-3 left_col">
+            <div class="left_col scroll-view">
+                <div class="navbar nav_title" style="border: 0;">
+                    <a href="index.html" class="site_title"><i class="fa fa-dashboard"></i><span> Suscity</span></a>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="profile">
+                    <div class="profile_pic">
+                        <img src="images/user.png" alt="..." class="img-circle profile_img">
+                    </div>
+
+                    <div class="profile_info">
+                        <span>Welcome,</span>
+                        <h2 id="userNav"></h2>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <br>
+
+                <!-- sidebar menu -->
+                <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                    <div class="menu_section">
+                        <h3>Menu</h3>
+                        <ul class="nav side-menu">
+                            <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="index.html">Dashboard</a></li>
+                                    <li><a href="submit.html">Submit Data</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-user"></i> Profile <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="index3.html">[WIP] Edit Profile</a></li>
+                                    <li><a href="index4.html">[WIP] - </a></li>
+                                    <li><a href="index4.html">[WIP] - </a></li>
+                                    <li><a href="index4.html">[WIP] - </a></li>
+                                    <li><a href="index4.html">[WIP] - </a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-at"></i> Contacts <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="index6.html">[WIP] Contacts</a></li>
+                                    <li><a href="index7.html">[WIP] About us</a></li>
+                                    <li><a href="versions.html">Versions</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- sidebar menu -->
+
+            </div>
+        </div>
+
+        <!-- NAVBAR -->
+        <div class="top_nav">
+            <div class="nav_menu">
+                <nav>
+                    <div class="nav toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="">
+                            <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
+                               aria-expanded="false">
+                                <img src="images/user.png"> <b id="userTop"></b>
+                                <span class=" fa fa-angle-down"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i>Log Out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- NAVBAR -->
+
+
+        <!-- PAGE CONTENT -->
+        <div class="right_col" role="main" id="pageContent">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Submit Data</h2>
+                    <br><br>
+                    <p>If you whish to submit data in this Dashboard, send the following informations to us, so we can create an account for you. After the account is created, we will send you a PDF file with instructions on how to submit data, the user and password to send information to the database. If you have any doubt, feel free to send an email to <b>joaonf@dei.uc.pt</b>.</p>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <form action="javascript:void(0)" class="form-horizontal form-label-left" id="submit-data-form" enctype="multipart/form-data">
+                        <div class="x_title">
+                            <div class="row form-group">
+                                <div class="col-lg-12 form-group">
+                                    <label for="location">Location</label>
+                                    <input type="text" class="form-control" id="location" name="location"
+                                           placeholder="Universidade de Coimbra">
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-lg-12 form-group">
+                                    <label for="device">Device Name</label>
+                                    <input type="text" class="form-control" id="device" name="device"
+                                           placeholder="Arduino Uno">
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-lg-12 form-group">
+                                    <label for="distribution">Distribution</label>
+                                    <input type="text" class="form-control" id="distribution" name="distribution"
+                                           placeholder="Linux">
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-lg-12 form-group">
+                                    <label for="sensor">Sensor</label>
+                                    <input type="text" class="form-control" id="sensor" name="sensor"
+                                           placeholder="Temperature">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="x_title">
+                            <div class="row form-group">
+                                <div class="col-lg-12 form-group">
+                                    <label for="url">Url</label>
+                                    <input type="text" class="form-control" id="url" name="url"
+                                           placeholder="http://www.test.com/data">
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-lg-12 form-group">
+                                    <label for="interval">Interval (in seconds)</label>
+                                    <input type="text" class="form-control" id="interval" name="interval"
+                                           placeholder="5">
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-lg-12 form-group">
+                                    <label for="filename">Filename (without extension)</label>
+                                    <input type="text" class="form-control" id="filename" name="filename"
+                                           placeholder="sensorDataTemp">
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-lg-12 form-group">
+                                    <label>File extension</label><br>
+                                    <input type="radio" name="extension" id="extension-1" value=".csv" checked>
+									<label for="extension-1" class="font-weight-300" style="margin-right: 10px;">.csv</label>
+                                     
+                                    <input type="radio" name="extension" id="extension-2" value=".json">
+									<label for="extension-2" class="font-weight-300" style="margin-right: 10px;">.json</label>
+
+									<input type="radio" name="extension" id="extension-3" value=".xml">
+									<label for="extension-3" class="font-weight-300" style="margin-right: 10px;">.xml</label>
+
+									<input type="radio" name="extension" id="extension-4" value=".xml">
+									<label for="extension-4" class="font-weight-300" style="margin-right: 10px;">Other</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="x_title">
+                            <div class="row form-group">
+                                <div class="col-lg-12 form-group">
+                                    <label>Format</label><br>
+                                    <input type="radio" name="format" id="format-1" value="FTP" checked>
+									<label for="format-1" class="font-weight-300" style="margin-right: 10px;">FTP</label>
+                                     
+                                    <input type="radio" name="format" id="format-2" value="SFTP">
+									<label for="format-2" class="font-weight-300" style="margin-right: 10px;">SFTP</label>
+
+									<input type="radio" name="format" id="format-3" value="RSS">
+									<label for="format-3" class="font-weight-300" style="margin-right: 10px;">RSS</label>
+
+									<input type="radio" name="format" id="format-4" value="RSS">
+									<label for="format-4" class="font-weight-300" style="margin-right: 10px;">Other</label>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-lg-12 form-group">
+                                    <label for="username">Login (for the specified format)</label>
+                                    <input type="text" class="form-control" id="username" name="username"
+                                           placeholder="username">
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-lg-12 form-group">
+                                    <label for="password">Password (for the specified format)</label>
+                                    <input type="password" class="form-control" id="password" name="password"
+                                           placeholder="1234567">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="x_title">
+                        	<div class="row form-group">
+                                <div class="col-lg-12 form-group">
+                                <label>Other observations</label><br>
+                                <textarea id="observations" required="required" name="observations" class="form-control" style="z-index: auto; position: relative; line-height: 20px; font-size: 14px; transition: none;" data-gramm="true" data-txt_gramm_id="437f2e3c-dc1c-7f6c-a4f2-9d7d6c33c1e4" data-gramm_id="437f2e3c-dc1c-7f6c-a4f2-9d7d6c33c1e4" spellcheck="false" data-gramm_editor="true" placeholder="The filename differs every day. For example <month><day><year>-<name>."></textarea>
+                        	</div>
+                            <div class="row form-group">
+                                <div class="col-lg-12 form-group">
+                                    <label for="email">Your email</label>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                           placeholder="email@email.com">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" id="submit" value="submit" class="btn btn-success">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- PAGE CONTENT -->
+
+        <!-- FOOTER -->
+        <footer class="right_col" role="main">
+            <div class="clearfix"></div>
+        </footer>
+        <!-- FOOTER -->
+
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="../vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="../vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="../vendors/nprogress/nprogress.js"></script>
+<!-- Chart.js -->
+<script src="../vendors/Chart.js/dist/Chart.min.js"></script>
+<!-- gauge.js -->
+<script src="../vendors/gauge.js/dist/gauge.min.js"></script>
+<!-- bootstrap-progressbar -->
+<script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- iCheck -->
+<script src="../vendors/iCheck/icheck.min.js"></script>
+<!-- Skycons -->
+<script src="../vendors/skycons/skycons.js"></script>
+<!-- Flot -->
+<script src="../vendors/Flot/jquery.flot.js"></script>
+<script src="../vendors/Flot/jquery.flot.pie.js"></script>
+<script src="../vendors/Flot/jquery.flot.time.js"></script>
+<script src="../vendors/Flot/jquery.flot.stack.js"></script>
+<script src="../vendors/Flot/jquery.flot.resize.js"></script>
+<!-- Flot plugins -->
+<script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+<script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+<script src="../vendors/flot.curvedlines/curvedLines.js"></script>
+<!-- DateJS -->
+<script src="../vendors/DateJS/build/date.js"></script>
+<!-- JQVMap -->
+<script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
+<script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+<script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="../build/js/custom.min.js"></script>
+
+
+<!-- Date Picker -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css"/>
+
+<script src="../vendors/pnotify/dist/pnotify.js"></script>
+<script src="../vendors/pnotify/dist/pnotify.buttons.js"></script>
+<script src="../vendors/pnotify/dist/pnotify.nonblock.js"></script>
+</body>
+</html>
